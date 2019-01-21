@@ -14,23 +14,8 @@
 
 <script>
 // inject-start
-import ybutton from '@/components/button/index.vue'
-const components = [
-  {
-    "name": "ybutton",
-    "path": "@/components/button/index.vue",
-    "props": {
-      "text": "我是按钮",
-      "backgroundColor": "red",
-      "color": "white",
-      "width": 100,
-      "height": 40
-    }
-  }
-]
-const importList = {
-  'ybutton': ybutton
-}
+const components = []
+const importList = {}
 // inject-end
 
 export default {
