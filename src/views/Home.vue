@@ -1,14 +1,9 @@
 <template>
   <div class="home">
-    <template
-      v-for="(item, i) in components"
-    >
-      <component
-        :key="i"
-        :is="item.name"
-        :config="item.props"
-      />
-    </template>
+    <render
+      :components="components"
+      :import-list="importList"
+    />
   </div>
 </template>
 
@@ -18,14 +13,16 @@ const components = []
 const importList = {}
 // inject-end
 
+import render from './render'
 export default {
   name: 'home',
   components: {
-    ...importList
+    render
   },
   data () {
     return {
-      components
+      components,
+      importList
     }
   },
   created () {
