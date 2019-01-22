@@ -3,7 +3,7 @@ export default {
 
   props: {
     components: Array,
-    importList: Array
+    importList: Object
   },
 
   render (c, context) {
